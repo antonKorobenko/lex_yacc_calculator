@@ -729,40 +729,42 @@ case 1:
 YY_RULE_SETUP
 #line 8 "bas.l"
 {
-    yylval = *yytext - 'a';
-    return VARIABLE;
-}
+                yylval = *yytext - 'a';
+                return VARIABLE;
+            }   
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
 #line 13 "bas.l"
 {
-    yylval = atoi(yytext);
-    return INTEGER;
-}
+                yylval = atoi(yytext);
+                return INTEGER;
+            }
 	YY_BREAK
 case 3:
 /* rule 3 can match eol */
 YY_RULE_SETUP
 #line 18 "bas.l"
-{ return *yytext; }
+{
+                return *yytext; 
+            }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 20 "bas.l"
+#line 22 "bas.l"
 ;
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 22 "bas.l"
+#line 24 "bas.l"
 yyerror("invalid character");
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 23 "bas.l"
+#line 25 "bas.l"
 ECHO;
 	YY_BREAK
-#line 765 "lex.yy.c"
+#line 767 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1767,7 +1769,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 23 "bas.l"
+#line 25 "bas.l"
 
 int yywrap(void) {
     return 1;

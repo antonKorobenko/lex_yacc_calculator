@@ -1,3 +1,4 @@
+#include <stdio.h>
 /* A Bison parser, made by GNU Bison 2.3.  */
 
 /* Skeleton implementation for Bison's Yacc-like parsers in C
@@ -81,8 +82,8 @@
 #line 4 "bas.y"
 
 void yyerror(char *);
-int yylex(void);
-int sym[26];
+        int yylex(void);
+        int sym[26];
 
 
 /* Enabling traces.  */
@@ -1573,10 +1574,10 @@ yyreturn:
 #line 27 "bas.y"
 
 void yyerror(char *s) {
-fprintf(stderr, "%s\n", s);
-return 0;
+        printf("%s\n", s);
+        return;
 }
 int main(void) {
-yyparse();
-return 0;
+        yyparse();
+        return 0;
 }
